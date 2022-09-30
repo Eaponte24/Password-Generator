@@ -62,18 +62,22 @@ function generatePassword() {
     if (userWantsUppercase) {
         listBatch.push(uppercaselist)
     }
-//note here
+// This if statment is if the user hits cancel to all the prompts then the script will default to lowercase
+    if (listBatch.length === 0) {
+      listBatch.push(lowercaselist)  
+    }
+// this is tthe var that will be used when the passwork is generated it will be applied
     var generatedPassword = ""
-// minus 1 cause arrays start at zero and dont want to start at 1
+// minus 1 cause arrays start at zero and dont want to start at 1, this is randomizing the lists inside the listbatch and choosing the randomcharacters from within those lists
     for (var i = 0; i <passwordLength; i++ ){
      var randomList = getRandomList(listBatch)
      var randomChar = getRandomList(randomList)
-     console.log(randomChar)
-    }
+     generatedPassword += randomChar
+     }
 
 
 
-    
+    console.log(generatedPassword)
 
 
    

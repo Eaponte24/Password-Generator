@@ -1,8 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-/* so far this function allows me to click on the generate button and if i dont put in a number
-i get a thats not a number response back if it is i get the is a number response */
+
 function generatePassword() {
    
     var userinput = window.prompt("How long do you want your password to be?");
@@ -11,8 +10,12 @@ function generatePassword() {
 
     if (isNaN(passwordLength)) {
         window.alert("Thats not a number!")
-    } else {
-        window.alert("Thats a vaild number, good job!")
+        return
+    } 
+
+    if (passwordLength < 8 || passwordLength > 128) {
+        window.alert("Password Legnth must be between 8 and 128 Characters")
+        return
     }
 
     

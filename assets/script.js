@@ -28,9 +28,32 @@ function generatePassword() {
     var lowercaselist = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","w","x","y","z"]
     var uppercaselist = []
 
+    var listBatch = []
+
     for (var i = 0; i < lowercaselist.length; i++) {
         uppercaselist[i] = lowercaselist[i].toUpperCase()
     }
+
+
+    if (userWantsNumbers) {
+        listBatch.push(numberlist)
+    }
+
+    if (userWantsSymbols) {
+        listBatch.push(symbollist)
+    }
+
+    if (userWantsLowercase) {
+        listBatch.push(lowercaselist)
+    }
+
+    if (userWantsUppercase) {
+        listBatch.push(uppercaselist)
+    }
+
+    
+
+
    
 }
 

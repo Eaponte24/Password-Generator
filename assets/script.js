@@ -75,11 +75,7 @@ function generatePassword() {
      generatedPassword += randomChar
      }
 
-
-
-    console.log(generatedPassword)
-
-
+ return generatedPassword
    
 }
 

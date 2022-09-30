@@ -22,7 +22,15 @@ function generatePassword() {
     var userWantsSymbols = window.confirm("Would you like your password to include symbols?")
     var userWantsLowercase = window.confirm("Would you like your password to include lowercase letters?")
     var userWantsUppercase = window.confirm("Would you like your password to include uppercase letters?")
-    
+
+    var numberlist = ["0","1","2","3","4","5","6","7","8","9"]
+    var symbollist = ["!","@","#","$","%","^","&","*","(","+"]
+    var lowercaselist = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","w","x","y","z"]
+    var uppercaselist = []
+
+    for (var i = 0; i < lowercaselist.length; i++) {
+        uppercaselist[i] = lowercaselist[i].toUpperCase()
+    }
    
 }
 
